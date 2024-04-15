@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .auth-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin-bottom: 10px;
+    }
+
+    .auth-button img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .auth-button:hover {
+        background-color: #fb969686;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Benvenuto</h1>
+        <button class="auth-button" onclick="redirectToGoogle()">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo">
+            Accedi con Google
+        </button>
+        <button class="auth-button" onclick="redirectToFacebook()">
+            <img src="https://www.svgrepo.com/show/349359/facebook.svg" alt="Facebook Logo">
+            Accedi con Facebook
+        </button>
+    </div>
+    
+
+<script>
+    function redirectToGoogle() {
+        // Redirect to Google authentication URL
+        window.location.href = "/auth/google";
+    }
+    function redirectToFacebook() {
+        // Redirect to Facebook authentication URL
+        window.location.href = "/auth/facebook";
+    }
+</script>
+
+</body>
+</html>
