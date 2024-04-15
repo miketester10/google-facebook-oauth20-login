@@ -14,12 +14,7 @@ function getUserFromDB(user) {
             } else if (row === undefined) { // user non trovato (ovvero id del determinato provider non trovata nel db)
                 resolve(false);
             } else { // user trovato (ovvero id del determinato provider trovato nel db)
-                const user = new Utente(  row.id, 
-                                          row.nome, 
-                                          row.cognome, 
-                                          row.email, 
-                                          row.provider );
-                resolve(user);
+                resolve(true);
             }
         });
     });
